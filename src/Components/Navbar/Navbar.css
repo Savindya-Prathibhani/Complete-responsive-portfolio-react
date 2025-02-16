@@ -65,6 +65,11 @@
 @media (max-width: 768px) {
   .navbar {
     margin: 20px 50px;
+    background-color: transparent; /* Remove background when mobile menu is shown */
+    padding: 0;
+  }
+  .nav-logo {
+    display: none; /* Hide logo in mobile view */
   }
   .nav-connect {
     display: none;
