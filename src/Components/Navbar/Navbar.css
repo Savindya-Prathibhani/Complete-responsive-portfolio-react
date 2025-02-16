@@ -1,0 +1,107 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f0016; /* Ensure navbar has a background */
+  padding: 10px 170px; /* Adjust padding */
+  z-index: 1000; /* Ensure it's above other elements */
+  
+}
+
+.nav-logo {
+  height: 80px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+}
+
+.nav-connect {
+  padding: 20px 40px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #00b1a7 0.36%, #9f7ce0 102.06%);
+  font-size: 22px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.nav-menu li img {
+  display: flex;
+  margin: auto;
+}
+
+.anchor-link {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-mob-close {
+  display: none;
+}
+
+.nav-mob-open {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    margin: 20px 50px;
+  }
+  .nav-connect {
+    display: none;
+  }
+  .nav-mob-open {
+    display: block;
+    position: fixed;
+    right: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+  .nav-mob-close {
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: 200px;
+    width: 30px;
+    cursor: pointer;
+  }
+  .nav-menu {
+    position: fixed;
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+    gap: 30px;
+    background-color: #1f0016;
+    width: 250px;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.5s;
+    right: -250px;
+    padding-top: 60px;
+  }
+  .nav-menu li {
+    font-size: 20px;
+    padding-left: 50px;
+    flex-direction: row;
+    gap: 10px;
+  }
+}
